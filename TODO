@@ -2,3 +2,4 @@ Thread dedie
 README
 Disposition des JTextField et des labels dans DefineGUI
 Affichage graphique
+Est-ce qu'on gère vraiment le choix des paramètres ? --> pb avec width
