@@ -5,7 +5,10 @@
  */
 package gui;
 
-import gui.DefineGUI;
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.GridBagLayout;
 import javax.swing.*;
 import java.awt.event.*;
 
@@ -23,22 +26,28 @@ public class GUI extends JFrame {
             }
         };
         addWindowListener(l);
+//
+//        JPanel panneau = new JPanel();
+//
+//        setContentPane(panneau);
+//        setSize(1500, 750);
+//        setVisible(true);
         
-        JButton bouton = new JButton("Define the woods");
+        JPanel pane = new JPanel();
+        JCanvas canvas = new JCanvas();
+//        pane.add(canvas);
         
-        bouton.addActionListener(new defineListener(this));
-        JPanel panneau = new JPanel();
-        panneau.add(bouton);
-
-        setContentPane(panneau);
-        setSize(1500, 750);
+        setContentPane(canvas);
+        setSize(500, 300);
         setVisible(true);
-    }
     
-    class defineListener implements ActionListener{
-        
+    
+    }
+
+    class defineListener implements ActionListener {
+
         GUI gui;
-        
+
         private defineListener(GUI gui) {
             this.gui = gui;
         }
@@ -48,7 +57,7 @@ public class GUI extends JFrame {
             System.out.println("Priut");
             DefineGUI define = new DefineGUI();
         }
-        
+
     }
 
 }
