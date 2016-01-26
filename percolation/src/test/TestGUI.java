@@ -5,7 +5,7 @@
  */
 package test;
 
-import gui.folder.GUI;
+import gui.GUI;
 import javax.swing.JFrame;
 
 /**

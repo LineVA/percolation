@@ -1,8 +1,8 @@
 
 package percolation;
 
-import gui.folder.basicGUI;
-import gui.folder.GUI;
+import gui.DefineGUI;
+import gui.basicGUI;
 
 
 /**
@@ -18,9 +18,7 @@ public class Percolation {
     public static void main(String[] args) throws ForestException {
         // TO DO : FEATURE : CORRECT MANAGEMENT OF THE CREATION OF EMPTY SPACES
 
-        GUI gui = new GUI();
-        
-        
+        DefineGUI defineGUI = new DefineGUI();
         
         // The width of the forrest
 //        int width = 10;
@@ -34,14 +32,11 @@ public class Percolation {
 //        // The "bonus" probabbility to have, for a given case, an empty block instead of
 //        // a tree, if a neighbors is already empty.
 //        float eMaj = (float)0.1;
-        Forest forrest = new Forest(width, height, e, eMaj);
-        System.out.println("Situation initiale : ");
-        basicGUI.view(forrest.getForestArray(), width, height);
-        //System.out.println("Embrasement du premier arbre : ");
-       // forrest.selectFirst();
-        //basicGUI.view(forrest.getForestArray(), width, height);
-        System.out.println("Premier pas : ");
-        forrest.fire(p);
+//        Forest forrest = new Forest(width, height, e, eMaj);
+//        System.out.println("Situation initiale : ");
+//        basicGUI.view(forrest.getForestArray(), width, height);
+//        System.out.println("Premier pas : ");
+//        forrest.fire(p);
         
     }
 
