@@ -3,3 +3,7 @@ README
 Disposition des JTextField et des labels dans DefineGUI
 Affichage graphique
 Est-ce qu'on gère vraiment le choix des paramètres ? --> pb avec width
+Affichages des boutns "Step by step" et "To the end"
+Utilisation de "Step by step"
+Utilisation de "To the end"
+Probleme : enflamme des arbres de l'autre côté de la carte
