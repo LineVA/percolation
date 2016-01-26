@@ -5,12 +5,9 @@
  */
 package gui;
 
-import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.GridBagLayout;
 import javax.swing.*;
 import java.awt.event.*;
+import percolation.State;
 
 /**
  *
@@ -18,7 +15,7 @@ import java.awt.event.*;
  */
 public class GUI extends JFrame {
 
-    public GUI() {
+    public GUI(State[] arrayState, int width, int height) {
         super("Fire's wood");
         WindowListener l = new WindowAdapter() {
             public void windowClosing(WindowEvent e) {
@@ -26,38 +23,19 @@ public class GUI extends JFrame {
             }
         };
         addWindowListener(l);
-//
-//        JPanel panneau = new JPanel();
-//
-//        setContentPane(panneau);
-//        setSize(1500, 750);
-//        setVisible(true);
-        
-        JPanel pane = new JPanel();
-        JCanvas canvas = new JCanvas();
-//        pane.add(canvas);
+        int size;
+        if(width>height){
+            size = 500/width;
+        } else {
+            size = 500/height;
+        }
+        JCanvas canvas = new JCanvas(arrayState, width, height, size);
         
         setContentPane(canvas);
-        setSize(500, 300);
+        setSize(500, 530);
         setVisible(true);
     
     
-    }
-
-    class defineListener implements ActionListener {
-
-        GUI gui;
-
-        private defineListener(GUI gui) {
-            this.gui = gui;
-        }
-
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            System.out.println("Priut");
-            DefineGUI define = new DefineGUI();
-        }
-
     }
 
 }

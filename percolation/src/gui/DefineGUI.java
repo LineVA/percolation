@@ -105,8 +105,10 @@ public final class DefineGUI extends JFrame {
             try {
                 forrest = new Forest(width, height, e, eMaj);
                 System.out.println("Situation initiale : ");
+               // basicGUI.view(forrest.getForestArray(), width, height);
+                GUI gui = new GUI(forrest.getForestArray(), width, height);
+             //   forrest.selectFirst();
                 basicGUI.view(forrest.getForestArray(), width, height);
-                forrest.fire(p);
             } catch (ForestException fEx) {
                 fEx.printStackTrace();
             }

@@ -21,7 +21,7 @@ public class basicGUI {
                     System.out.print("t");
                     break;
                 case FIRE:
-                    System.out.print("f");
+                    System.out.print("F");
                     break;
                 case ASH:
                     System.out.print("a");

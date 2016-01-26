@@ -15,6 +15,6 @@ import javax.swing.JFrame;
 public class TestGUI {
     
         public static void main(String[] args) {
-            JFrame gui = new GUI();
+            JFrame gui = new GUI(null, 0, 0);
     }
 }
